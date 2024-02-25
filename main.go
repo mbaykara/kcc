@@ -20,8 +20,8 @@ type User struct {
 }
 
 type Contexts struct {
-	Context Context `yaml:"context"`
 	Name    string  `yaml:"name"`
+	Context Context `yaml:"context"`
 }
 
 type Context struct {
