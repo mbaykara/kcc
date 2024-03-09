@@ -1,0 +1,24 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: kcc
+spec:
+  homepage: https://github.com/mbaykara/kcc
+  shortDescription: Remove dead context from your kubeconfig
+  version: {{ .TagName }}
+  description: |
+    Kube Config Cleaner (a.k.a kcc ) deletes dead cluster config from local ~/.kube/config file
+  platforms:
+  - selector:
+      matchExpressions:
+      - key: os
+        operator: In
+        values:
+        - darwin
+        - linux
+    bin: kcc
+    files:
+    - from: kcc-*/kcc
+      to: .
+    - from: kcc-*/LICENSE
+      to: .
