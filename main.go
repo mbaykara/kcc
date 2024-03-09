@@ -88,7 +88,7 @@ func readKubeConfig() (KubeConfig, error) {
 func checkContext(contextName string) bool {
 	cmd := exec.Command("kubectl", "get", "pods", "--context", contextName)
 	if err := cmd.Run(); err != nil {
-		fmt.Printf("Removing dead context: %s\n", contextName)
+		fmt.Printf("The context: %s is dead, will be deleted\n", contextName)
 		return false
 	}
 	return true
