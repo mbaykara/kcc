@@ -8,7 +8,7 @@ builds:
     goarch:
       - amd64
     binary: kcc
-    main: ./main
+    main: ./main.go
     ldflags:
       - -s -w
       - -X main.version={{.Version}}
