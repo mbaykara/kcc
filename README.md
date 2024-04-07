@@ -1,4 +1,4 @@
-# KCC
+# KubeConfigCleaner
 KCC (KubeConfigCleaner) is a lightweight tool designed to clean up your Kubernetes configuration files (kubeconfig) by removing dead or obsolete contexts. It helps keep your ~/.kube/config file organized and clutter-free.
 
 Features
